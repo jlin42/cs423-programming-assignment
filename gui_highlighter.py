@@ -1,6 +1,5 @@
 from PIL import Image, ImageDraw
 import os
-import re
 
 def parse_bounds(node):
     top_left = node["bounds"][0].split(',')

@@ -49,7 +49,8 @@ def get_node_attr(file) -> list:
     return nodes
     
 data = sorted(os.listdir('data')) # Sort directory to guarantee correct file couplings
-os.mkdir("output")
+if not os.path.exists("output"):
+    os.mkdir("output")
 # Iterate through every xml file
 for i in range(1, len(data), 2):
     image = data[i-1]
